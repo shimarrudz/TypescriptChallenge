@@ -1,0 +1,19 @@
+{
+  "name": "typescriptchallenge",
+  "version": "1.0.0",
+  "description": "✔️ This repository is dedicated for a Typescript challenge, that I've done for an job interview",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shimarrudz/TypescriptChallenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shimarrudz/TypescriptChallenge/issues"
+  },
+  "homepage": "https://github.com/shimarrudz/TypescriptChallenge#readme"
+}
