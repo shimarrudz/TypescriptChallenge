@@ -16,11 +16,14 @@ function solve(patients: number[][]): number {
 
     for (const [arrival, time] of patients) {
         currentTime = Math.max(currentTime, arrival);
+        
         totalWaitingTime += currentTime - arrival;
+        
         currentTime += time;
     }
 
     const averageWaitingTime = Math.floor(totalWaitingTime / patients.length);
+    
     return averageWaitingTime;
 }
 
