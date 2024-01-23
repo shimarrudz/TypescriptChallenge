@@ -11,20 +11,19 @@ stdin.on('data', function (data) {
 });
 
 function solve(N: number, operations: number[]): number[] {
-    const reservedSeats = new Array<boolean>(N + 1).fill(false);
+    const reservedSeats = new Set<number>();
     const result: number[] = [];
 
     for (let op of operations) {
         if (op === 0) {
-            for (let seat = 1; seat <= N; seat++) {
-                if (!reservedSeats[seat]) {
-                    reservedSeats[seat] = true;
-                    result.push(seat);
-                    break;
-                }
+            let seatToReserve = 1;
+            while (reservedSeats.has(seatToReserve)) {
+                seatToReserve++;
             }
+            reservedSeats.add(seatToReserve);
+            result.push(seatToReserve);
         } else {
-            reservedSeats[op] = false;
+            reservedSeats.delete(op);
         }
     }
 
